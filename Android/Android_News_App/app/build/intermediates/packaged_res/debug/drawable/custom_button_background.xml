@@ -1,0 +1,16 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Колір для стану натискання -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/my_primary_pressed" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- За відсутності натискання застосовується колір кнопки -->
+    <item>
+        <shape>
+            <solid android:color="@color/my_primary" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>

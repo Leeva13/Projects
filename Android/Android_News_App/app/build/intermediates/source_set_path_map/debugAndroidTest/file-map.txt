@@ -1,0 +1,9 @@
+com.example.newsnow.test.app-androidTest-0 C:\My PC\Projects\Android_News_App\app\build\generated\res\resValues\androidTest\debug
+com.example.newsnow.test.app-androidTest-1 C:\My PC\Projects\Android_News_App\app\build\generated\res\rs\androidTest\debug
+com.example.newsnow.test.app-mergeDebugAndroidTestResources-2 C:\My PC\Projects\Android_News_App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.newsnow.test.app-mergeDebugAndroidTestResources-3 C:\My PC\Projects\Android_News_App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.newsnow.test.app-merged_res-4 C:\My PC\Projects\Android_News_App\app\build\intermediates\merged_res\debugAndroidTest
+com.example.newsnow.test.app-androidTest-5 C:\My PC\Projects\Android_News_App\app\src\androidTest\res
+com.example.newsnow.test.app-androidTestDebug-6 C:\My PC\Projects\Android_News_App\app\src\androidTestDebug\res
+com.example.newsnow.test.app-core-1.5.0-7 C:\Users\artem\.gradle\caches\transforms-3\b8770ec6cf006f68d9ad6eb08d02bb19\transformed\core-1.5.0\res
+com.example.newsnow.test.app-annotation-experimental-1.4.0-8 C:\Users\artem\.gradle\caches\transforms-3\d2ce50d0115d17aafa7c51a06db88e35\transformed\annotation-experimental-1.4.0\res

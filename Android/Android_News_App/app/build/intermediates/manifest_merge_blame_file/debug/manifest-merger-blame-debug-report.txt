@@ -1,0 +1,176 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.newsnow"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="34" />
+9-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.newsnow.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.newsnow.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:7:5-44:19
+20        android:allowBackup="true"
+20-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.13.0] C:\Users\artem\.gradle\caches\transforms-3\e03b31314aa0879a6367754ac61c9f7a\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:14:9-35
+30        android:theme="@style/Theme.NewsNow" >
+30-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:15:9-45
+31        <activity
+31-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:17:9-23:20
+32            android:name="com.example.newsnow.NewsFullActivity"
+32-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:18:13-45
+33            android:exported="false" >
+33-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:19:13-37
+34            <meta-data
+34-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:20:13-22:36
+35                android:name="android.app.lib_name"
+35-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:21:17-52
+36                android:value="" />
+36-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:22:17-33
+37        </activity>
+38        <activity
+38-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:24:9-36:20
+39            android:name="com.example.newsnow.SplashActivity"
+39-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:25:13-43
+40            android:exported="true" >
+40-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:26:13-36
+41            <intent-filter>
+41-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:27:13-31:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:28:17-69
+42-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:28:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:30:17-77
+44-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:30:27-74
+45            </intent-filter>
+46
+47            <meta-data
+47-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:20:13-22:36
+48                android:name="android.app.lib_name"
+48-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:21:17-52
+49                android:value="" />
+49-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:22:17-33
+50        </activity>
+51        <activity
+51-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:37:9-43:20
+52            android:name="com.example.newsnow.MainActivity"
+52-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:38:13-41
+53            android:exported="false" >
+53-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:39:13-37
+54            <meta-data
+54-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:20:13-22:36
+55                android:name="android.app.lib_name"
+55-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:21:17-52
+56                android:value="" />
+56-->C:\My PC\Projects\Android_News_App\app\src\main\AndroidManifest.xml:22:17-33
+57        </activity>
+58
+59        <provider
+59-->[com.squareup.picasso:picasso:2.71828] C:\Users\artem\.gradle\caches\transforms-3\cd96fb41056288f6fc92d819f3d19b7b\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+60            android:name="com.squareup.picasso.PicassoProvider"
+60-->[com.squareup.picasso:picasso:2.71828] C:\Users\artem\.gradle\caches\transforms-3\cd96fb41056288f6fc92d819f3d19b7b\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+61            android:authorities="com.example.newsnow.com.squareup.picasso"
+61-->[com.squareup.picasso:picasso:2.71828] C:\Users\artem\.gradle\caches\transforms-3\cd96fb41056288f6fc92d819f3d19b7b\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+62            android:exported="false" />
+62-->[com.squareup.picasso:picasso:2.71828] C:\Users\artem\.gradle\caches\transforms-3\cd96fb41056288f6fc92d819f3d19b7b\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+63        <provider
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+64            android:name="androidx.startup.InitializationProvider"
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+65            android:authorities="com.example.newsnow.androidx-startup"
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+66            android:exported="false" >
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+67            <meta-data
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+69                android:value="androidx.startup" />
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\artem\.gradle\caches\transforms-3\ec6e2ba61c9a42dd8e0aa44ee71f9dfb\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+70            <meta-data
+70-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artem\.gradle\caches\transforms-3\c282840b3a3f6bd0d4ed293dbc840b67\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+71-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artem\.gradle\caches\transforms-3\c282840b3a3f6bd0d4ed293dbc840b67\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+72                android:value="androidx.startup" />
+72-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artem\.gradle\caches\transforms-3\c282840b3a3f6bd0d4ed293dbc840b67\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+73            <meta-data
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+74                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+75                android:value="androidx.startup" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+76        </provider>
+77
+78        <receiver
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+79            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+80            android:directBootAware="false"
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+81            android:enabled="true"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+82            android:exported="true"
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+83            android:permission="android.permission.DUMP" >
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+84            <intent-filter>
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+85                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+86            </intent-filter>
+87            <intent-filter>
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+88                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+89            </intent-filter>
+90            <intent-filter>
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+91                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+92            </intent-filter>
+93            <intent-filter>
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+94                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\artem\.gradle\caches\transforms-3\fe88af1c211f87a9d90bbd1e778893a4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+95            </intent-filter>
+96        </receiver>
+97    </application>
+98
+99</manifest>
