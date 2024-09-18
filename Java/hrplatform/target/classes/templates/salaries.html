@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Salaries</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Salaries</h1>
+    <form th:action="@{/salaries}" method="post">
+        <div class="form-group">
+            <input type="number" name="employeeId" placeholder="Employee ID" required/>
+        </div>
+        <div class="form-group">
+            <input type="number" name="amount" placeholder="Amount" required/>
+        </div>
+        <button type="submit">Add Salary</button>
+    </form>
+    <ul>
+        <li th:each="salary : ${salaries}">
+            <span th:text="${salary.employeeId}">Employee ID</span> -
+            <span th:text="${salary.amount}">Amount</span>
+            <form th:action="@{/salaries/{id}(id=${salary.id})}" method="post">
+                <input type="hidden" name="_method" value="delete"/>
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+    <a href="/" class="button">Back to Home</a>
+</div>
+</body>
+</html>

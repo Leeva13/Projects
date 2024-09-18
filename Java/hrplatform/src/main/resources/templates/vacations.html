@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Vacations</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Vacations</h1>
+    <form th:action="@{/vacations}" method="post">
+        <div class="form-group">
+            <input type="number" name="employeeId" placeholder="Employee ID" required/>
+        </div>
+        <div class="form-group">
+            <input type="date" name="startDate" placeholder="Start Date" required/>
+        </div>
+        <div class="form-group">
+            <input type="date" name="endDate" placeholder="End Date" required/>
+        </div>
+        <button type="submit">Add Vacation</button>
+    </form>
+    <ul>
+        <li th:each="vacation : ${vacations}">
+            <span th:text="${vacation.employeeId}">Employee ID</span> -
+            <span th:text="${vacation.startDate}">Start Date</span> -
+            <span th:text="${vacation.endDate}">End Date</span>
+            <form th:action="@{/vacations/{id}(id=${vacation.id})}" method="post">
+                <input type="hidden" name="_method" value="delete"/>
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+    <a href="/" class="button">Back to Home</a>
+</div>
+</body>
+</html>
