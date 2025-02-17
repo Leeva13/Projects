@@ -75,8 +75,7 @@ Hi! I'm a **Full-Stack Developer** with **3+ years of experience** in building s
 ## 📫 Let's Connect!  
 - **Email:** [artembrk11@gmail.com](mailto:artembrk11@gmail.com)  
 - **LinkedIn:** [Artem Brazhnyk](https://linkedin.com/in/yourprofile)  
-- **Phone:** +38 068 280 0345  
-- **GitHub:** [@yourusername](https://github.com/yourusername)  
+- **GitHub:** [@Leeva13](https://github.com/Leeva13)  
 
 ---
 
