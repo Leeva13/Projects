@@ -1,0 +1,61 @@
+# Ігноруємо RTF-файли
+*.rtf
+
+# Ігноруємо системні файли
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Ігноруємо IDE-файли
+.idea/
+*.iml
+*.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ігноруємо Java / Spring файли
+target/
+out/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# Ігноруємо Python / Django файли
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.sqlite3
+db.sqlite3
+*.log
+*.pot
+local_settings.py
+media/
+staticfiles/
+*.DS_Store
+
+# Ігноруємо Node.js / JavaScript файли
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+dist/
+coverage/
+
+# Ігноруємо Web файли
+*.min.js
+*.min.css
+
+# Ігноруємо додаткові файли VS Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-workspace
