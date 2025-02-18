@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Route</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Create a New Route</h1>
+    <form action="/create-route" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required><br>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required><br>
+        <label for="startLocation">Start Location:</label>
+        <input type="text" id="startLocation" name="startLocation" required><br>
+        <label for="endLocation">End Location:</label>
+        <input type="text" id="endLocation" name="endLocation" required><br>
+        <button type="submit">Create Route</button>
+    </form>
+    <a href="/">Back to Home</a>
+</div>
+</body>
+</html>

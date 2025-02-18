@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Клієнти</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Клієнти</h1>
+<nav>
+    <a th:href="@{/}">Головна</a>
+    <a th:href="@{/clients/new}">Додати Клієнта</a>
+</nav>
+<div class="container">
+    <ul>
+        <li th:each="client : ${clients}">
+            <span th:text="${client.name}"></span>
+            <span th:text="${client.email}"></span>
+            <a th:href="@{/clients/edit/{id}(id=${client.id})}">Редагувати</a>
+            <a th:href="@{/clients/delete/{id}(id=${client.id})}">Видалити</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+ALTER TABLE fish ADD COLUMN weight DOUBLE;

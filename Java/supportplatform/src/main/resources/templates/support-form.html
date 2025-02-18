@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма Підтримки</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Форма Підтримки</h1>
+    <nav>
+        <a th:href="@{/support}">Список Підтримки</a>
+    </nav>
+    <form th:action="@{/support}" th:object="${support}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label for="query">Запит:</label>
+            <input type="text" id="query" th:field="*{query}"/>
+        </div>
+        <div>
+            <label for="response">Відповідь:</label>
+            <textarea id="response" th:field="*{response}"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="form-button">Зберегти</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

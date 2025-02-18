@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Unveil Results</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Survey Results for <span th:text="${name}"></span></h1>
+    <p>You answered <span th:text="${correctAnswers}"></span> questions correctly.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Question</th>
+            <th>Your Answer</th>
+            <th>Correct Answer</th>
+        </tr>
+        </thead>
+        <tbody th:each="entry : ${results}">
+        <tr>
+            <td th:text="${entry.questionText}"></td>
+            <td th:text="${entry.userAnswer}"></td>
+            <td th:text="${entry.correctAnswer}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <form action="/survey" method="post">
+        <input type="hidden" name="name" th:value="${name}">
+        <button type="submit">Take Quiz Again</button>
+    </form>
+</div>
+</body>
+</html>

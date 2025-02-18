@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Our Projects</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Corporate</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacts">View Messages</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="mt-4">Our Projects</h1>
+    <p>Here you can find information about our ongoing and completed projects.</p>
+
+    <!-- Adding project data -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Project Alpha</h2>
+        </div>
+        <div class="card-body">
+            <p>Project Alpha is focused on developing a new platform for managing corporate resources efficiently. This project is expected to be completed by Q4 2024.</p>
+            <ul>
+                <li><strong>Status:</strong> Ongoing</li>
+                <li><strong>Team:</strong> John Doe, Jane Smith, Bob Johnson</li>
+                <li><strong>Budget:</strong> $2,000,000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Project Beta</h2>
+        </div>
+        <div class="card-body">
+            <p>Project Beta aims to integrate AI solutions into our customer service process to enhance user experience. The project was successfully completed in Q1 2024.</p>
+            <ul>
+                <li><strong>Status:</strong> Completed</li>
+                <li><strong>Team:</strong> Alice Brown, Charlie Davis</li>
+                <li><strong>Budget:</strong> $1,500,000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Project Gamma</h2>
+        </div>
+        <div class="card-body">
+            <p>Project Gamma is an ongoing initiative to enhance our cybersecurity measures across all corporate systems. The project is scheduled to run through 2025.</p>
+            <ul>
+                <li><strong>Status:</strong> Ongoing</li>
+                <li><strong>Team:</strong> David Evans, Fiona Green</li>
+                <li><strong>Budget:</strong> $3,000,000</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Corporate Inc.</p>
+</footer>
+</body>
+</html>

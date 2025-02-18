@@ -1,0 +1,7 @@
+CREATE TABLE fish_images (
+  id INT NOT NULL AUTO_INCREMENT,
+  fish_id INT NOT NULL,
+  image_file_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (fish_id) REFERENCES fish(id) ON DELETE CASCADE
+);

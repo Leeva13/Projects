@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Route</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Edit Route</h1>
+    <form action="/edit-route" method="post">
+        <input type="hidden" name="id" th:value="${route.id}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${route.name}" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" th:value="${route.description}" required><br>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" th:value="${route.startDate}" required><br>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" th:value="${route.endDate}" required><br>
+        <label for="startLocation">Start Location:</label>
+        <input type="text" id="startLocation" name="startLocation" th:value="${route.startLocation}" required><br>
+        <label for="endLocation">End Location:</label>
+        <input type="text" id="endLocation" name="endLocation" th:value="${route.endLocation}" required><br>
+        <button type="submit">Update Route</button>
+    </form>
+    <a href="/">Back to Home</a>
+</div>
+</body>
+</html>

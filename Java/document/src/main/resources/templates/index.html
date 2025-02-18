@@ -1,0 +1,169 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--      xsi:schemaLocation="http://www.thymeleaf.org ">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Document Management System</title>-->
+<!--    <link rel="stylesheet" th:href="@{/css/styles.css}">-->
+<!--    <style>-->
+<!--        .container {-->
+<!--            width: 80%;-->
+<!--            margin: 0 auto;-->
+<!--        }-->
+
+<!--        .header {-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: center;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+
+<!--        .actions {-->
+<!--            display: flex;-->
+<!--            gap: 10px;-->
+<!--        }-->
+
+<!--        .table-container {-->
+<!--            margin-top: 20px;-->
+<!--            width: 100%;-->
+<!--        }-->
+
+<!--        table {-->
+<!--            width: 100%;-->
+<!--            border-collapse: collapse;-->
+<!--        }-->
+
+<!--        th, td {-->
+<!--            padding: 10px;-->
+<!--            text-align: left;-->
+<!--            border-bottom: 1px solid #ddd;-->
+<!--        }-->
+
+<!--        th {-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+
+<!--        .btn {-->
+<!--            padding: 8px 15px;-->
+<!--            background-color: #007bff;-->
+<!--            color: white;-->
+<!--            border: none;-->
+<!--            border-radius: 5px;-->
+<!--            text-decoration: none;-->
+<!--            cursor: pointer;-->
+<!--            text-align: center;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        .btn-danger {-->
+<!--            background-color: #dc3545;-->
+<!--        }-->
+
+<!--        .btn:hover {-->
+<!--            background-color: #0056b3;-->
+<!--        }-->
+
+<!--        .btn-danger:hover {-->
+<!--            background-color: #c82333;-->
+<!--        }-->
+
+<!--        .btn-small {-->
+<!--            width: 100px;-->
+<!--            height: 38px;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <div class="header">-->
+<!--        <h1>Document Management System</h1>-->
+<!--        <div class="actions">-->
+<!--            <form th:action="@{/}" method="get" style="margin-right: 20px;">-->
+<!--                <input type="text" name="search" placeholder="Search by title" th:value="${search}">-->
+<!--                <button type="submit" class="btn btn-small">Search</button>-->
+<!--                <a href="/" class="btn btn-small">Reset</a>-->
+<!--            </form>-->
+<!--            <a href="/document/create" class="btn">Create New Document</a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="table-container">-->
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>Title</th>-->
+<!--                <th>Date Created</th>-->
+<!--                <th>Actions</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="document : ${documents}">-->
+<!--                <td th:text="${document.title}">Document Title</td>-->
+<!--                <td th:text="${document.createdDate}">01/01/2024</td>-->
+<!--                <td>-->
+<!--                    <a th:href="@{/document/view/{id}(id=${document.id})}" class="btn">View</a>-->
+<!--                    <a th:href="@{/document/edit/{id}(id=${document.id})}" class="btn">Edit</a>-->
+<!--                    <a th:href="@{/document/delete/{id}(id=${document.id})}" class="btn btn-danger"-->
+<!--                       onclick="return confirm('Are you sure?')">Delete</a>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Management System</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <!-- Підключення сучасного шрифту -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Document Management System</h1>
+        <div class="actions">
+            <form th:action="@{/}" method="get" class="search-form">
+                <input type="text" name="search" placeholder="Search by title" th:value="${search}">
+                <button type="submit" class="btn">Search</button>
+                <a href="/" class="btn btn-reset">Reset</a>
+            </form>
+            <a href="/document/create" class="btn btn-primary">Create New Document</a>
+        </div>
+    </header>
+
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date Created</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="document : ${documents}">
+                <td th:text="${document.title}">Document Title</td>
+                <td th:text="${document.createdDate}">01/01/2024</td>
+                <td>
+                    <a th:href="@{/document/view/{id}(id=${document.id})}" class="btn btn-outline">View</a>
+                    <a th:href="@{/document/edit/{id}(id=${document.id})}" class="btn btn-outline">Edit</a>
+                    <a th:href="@{/document/delete/{id}(id=${document.id})}" class="btn btn-danger"
+                       onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

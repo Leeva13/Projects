@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Corporate</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacts">View Messages</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Our Corporate Site</h1>
+        <p class="lead">Our mission is to provide the best services to our clients.</p>
+        <a class="btn btn-primary btn-lg" href="/blog" role="button">Visit Blog</a>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/laptop.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Corporate Services</h5>
+                    <p class="card-text">Learn more about the services we offer to our clients.</p>
+                    <a href="/services" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/workplace.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Our Projects</h5>
+                    <p class="card-text">Discover the projects we are working on.</p>
+                    <a href="/projects" class="btn btn-primary">Discover</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/laptopworkplace.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">Get in touch with us for more information.</p>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Corporate Inc.</p>
+</footer>
+</body>
+</html>
