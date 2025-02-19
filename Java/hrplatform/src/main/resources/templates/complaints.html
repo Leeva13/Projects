@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Complaints</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Complaints</h1>
+    <form th:action="@{/complaints}" method="post">
+        <div class="form-group">
+            <input type="number" name="employeeId" placeholder="Employee ID" required/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="description" placeholder="Description" required/>
+        </div>
+        <div class="form-group">
+            <input type="date" name="date" placeholder="Date" required/>
+        </div>
+        <button type="submit">Add Complaint</button>
+    </form>
+    <ul>
+        <li th:each="complaint : ${complaints}">
+            <span th:text="${complaint.employeeId}">Employee ID</span> -
+            <span th:text="${complaint.description}">Description</span> -
+            <span th:text="${complaint.date}">Date</span>
+            <form th:action="@{/complaints/{id}(id=${complaint.id})}" method="post">
+                <input type="hidden" name="_method" value="delete"/>
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+    <a href="/" class="button">Back to Home</a>
+</div>
+</body>
+</html>

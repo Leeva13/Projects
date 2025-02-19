@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Travel Planner</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Travel Planner</h1>
+    <a class="create-route-btn" href="/create-route">Create New Route</a>
+
+    <h2>Sort by:</h2>
+    <form action="/" method="get">
+        <select name="sort">
+            <option value="">Select...</option>
+            <option th:value="name" th:selected="${sort == 'name'}">Name</option>
+            <option th:value="startDate" th:selected="${sort == 'startDate'}">Start Date</option>
+            <option th:value="endDate" th:selected="${sort == 'endDate'}">End Date</option>
+            <option th:value="startLocation" th:selected="${sort == 'startLocation'}">Start Location</option>
+            <option th:value="endLocation" th:selected="${sort == 'endLocation'}">End Location</option>
+        </select>
+        <select name="order">
+            <option value="asc" th:selected="${order == 'asc'}">Ascending</option>
+            <option value="desc" th:selected="${order == 'desc'}">Descending</option>
+        </select>
+        <button type="submit">Sort</button>
+    </form>
+
+
+    <h2>Routes</h2>
+    <div class="routes-container">
+        <div class="route-card" th:each="route : ${routes}">
+            <h3 th:text="${route.name}">Route Name</h3>
+            <p><strong>Description:</strong> <span th:text="${route.description}">Description</span></p>
+            <p><strong>Start Date:</strong> <span th:text="${route.startDate}">Start Date</span></p>
+            <p><strong>End Date:</strong> <span th:text="${route.endDate}">End Date</span></p>
+            <p><strong>Start Location:</strong> <span th:text="${route.startLocation}">Start Location</span></p>
+            <p><strong>End Location:</strong> <span th:text="${route.endLocation}">End Location</span></p>
+            <div class="route-buttons">
+                <a class="edit-btn" th:href="@{/edit-route/{id}(id=${route.id})}">Edit</a>
+                <form th:action="@{/delete-route/{id}(id=${route.id})}" method="post" style="display:inline;">
+                    <button class="delete-btn" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

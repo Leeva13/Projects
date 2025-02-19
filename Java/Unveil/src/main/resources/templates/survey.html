@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Survey</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script>
+        function highlightQuestion(questionId) {
+            var questionBlocks = document.getElementsByClassName('question-block');
+            for (var i = 0; i < questionBlocks.length; i++) {
+                if (questionBlocks[i].id === questionId) {
+                    questionBlocks[i].classList.add('selected');
+                } else {
+                    questionBlocks[i].classList.remove('selected');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Survey for <span th:text="${name}"></span></h1>
+    <form action="/results" method="post">
+        <input type="hidden" name="name" th:value="${name}">
+        <div th:each="question : ${questions}" th:id="${'question-' + question.id}" class="question-block">
+            <input type="hidden" name="questionIds" th:value="${question.id}">
+            <p th:text="${question.questionText}"></p>
+            <label>
+                <input type="radio" th:name="'answers[' + ${question.id} + ']'" th:value="${question.option1}" onclick="highlightQuestion('question-' + [[${question.id}]]);">
+                <span th:text="${question.option1}"></span>
+            </label><br>
+            <label>
+                <input type="radio" th:name="'answers[' + ${question.id} + ']'" th:value="${question.option2}" onclick="highlightQuestion('question-' + [[${question.id}]]);">
+                <span th:text="${question.option2}"></span>
+            </label><br>
+            <label>
+                <input type="radio" th:name="'answers[' + ${question.id} + ']'" th:value="${question.option3}" onclick="highlightQuestion('question-' + [[${question.id}]]);">
+                <span th:text="${question.option3}"></span>
+            </label><br>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

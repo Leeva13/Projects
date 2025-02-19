@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма Завдання</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Форма Завдання</h1>
+    <nav>
+        <a th:href="@{/tasks}">Список Завдань</a>
+    </nav>
+    <form th:action="@{/tasks}" th:object="${task}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <div>
+            <label for="title">Назва:</label>
+            <input type="text" id="title" th:field="*{title}" />
+        </div>
+        <div>
+            <label for="description">Опис:</label>
+            <textarea id="description" th:field="*{description}"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="form-button">Зберегти</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

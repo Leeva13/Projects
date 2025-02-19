@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn-delete {
+    background: #f44336;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+}
+
+.post-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+}
+
+.post-title {
+    color: #2c3e50;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.post-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.btn-custom {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.pagination {
+    margin-top: 2rem;
+    justify-content: center;
+}

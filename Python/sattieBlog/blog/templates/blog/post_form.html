@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="card shadow">
+        <div class="card-body">
+            <h2 class="card-title mb-4">{{ title }}</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.title.label_tag }}
+                    {{ form.title|add_class:"form-control" }}
+                </div>
+                <div class="mb-3">
+                    {{ form.content.label_tag }}
+                    {{ form.content|add_class:"form-control" }}
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-primary btn-lg">Зберегти</button>
+                    <a href="{% url 'blog-home' %}" class="btn btn-outline-secondary btn-lg">Скасувати</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

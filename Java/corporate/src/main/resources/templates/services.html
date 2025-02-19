@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Corporate Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Corporate</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacts">View Messages</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="mt-4">Corporate Services</h1>
+    <p>Learn more about the services we offer to our clients.</p>
+
+    <!-- Adding services data -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Consulting</h2>
+        </div>
+        <div class="card-body">
+            <p>Our consulting services help businesses streamline operations and enhance performance. Our experts provide tailored solutions to meet your unique needs.</p>
+            <ul>
+                <li>Business Strategy</li>
+                <li>Operational Efficiency</li>
+                <li>Technology Integration</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Financial Services</h2>
+        </div>
+        <div class="card-body">
+            <p>We offer a wide range of financial services including investment management, risk assessment, and financial planning to help you achieve your financial goals.</p>
+            <ul>
+                <li>Investment Management</li>
+                <li>Risk Assessment</li>
+                <li>Financial Planning</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Technology Solutions</h2>
+        </div>
+        <div class="card-body">
+            <p>Our technology solutions encompass software development, IT infrastructure, and cybersecurity services to ensure your business stays ahead in the digital age.</p>
+            <ul>
+                <li>Software Development</li>
+                <li>IT Infrastructure</li>
+                <li>Cybersecurity</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Corporate Inc.</p>
+</footer>
+</body>
+</html>

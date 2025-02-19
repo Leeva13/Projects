@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Світло-сірий фон для всіх сторінок */
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+
+.btn-primary, .btn-lg {
+    background-color: #8B4513; /* Коричневий колір */
+    border-color: #8B4513;
+}
+
+.btn-primary:hover, .btn-lg:hover {
+    background-color: #A0522D; /* Темніший коричневий */
+    border-color: #A0522D;
+}
+
+.jumbotron {
+    background: url('/img/library.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.3em;
+}
+
+.jumbotron h1 {
+    font-size: 3em;
+}
+
+.jumbotron p {
+    font-size: 1.5em;
+}
+
+.card {
+    margin-bottom: 1.5em;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    border-radius: 0.3em;
+}
+
+.list-group-item h2 {
+    margin-bottom: 0.5em;
+}
+
+.list-group-item p {
+    margin-bottom: 0;
+}
+
+.form-control {
+    border-radius: 0.3em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    position: bottom;
+}
+
+footer p {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 1.5; /* Значення line-height для вирівнювання тексту */
+}
+
+/* Styling for cards */
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+/* Styling for buttons */
+.btn-primary {
+    background-color: #8b4513; /* Коричневий дерев'яний колір */
+    border-color: #8b4513;
+}
+
+.btn-primary:hover {
+    background-color: #7a3e12;
+    border-color: #7a3e12;
+}

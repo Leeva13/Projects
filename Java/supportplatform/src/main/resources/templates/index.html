@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Platform</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e0f7fa;
+        }
+        .header {
+            background-color: #00acc1;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #00acc1;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #00acc1;
+            color: white;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list-group-item span, .list-group-item p {
+            margin: 0;
+        }
+        .list-group-item-actions {
+            margin-left: 20px;
+        }
+        .list-group-item-actions a {
+            color: white;
+            background-color: #00acc1;
+            margin-left: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .list-group-item-actions a:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Support Platform</h1>
+    <nav>
+        <a th:href="@{/clients}">Клієнти</a> |
+        <a th:href="@{/tasks}">Завдання</a> |
+        <a th:href="@{/documents}">Документи</a> |
+        <a th:href="@{/support}">Підтримка</a>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- Dashboard: Overview of Activities -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header">Дашборд: Огляд активності</div>
+                <div class="card-body">
+                    <p>Кількість клієнтів: <span th:text="${clientCount}">0</span></p>
+                    <p>Кількість завдань: <span th:text="${taskCount}">0</span></p>
+                    <p>Кількість документів: <span th:text="${documentCount}">0</span></p>
+                    <p>Кількість запитів на підтримку: <span th:text="${supportCount}">0</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- Existing Clients Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Клієнти</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li th:each="client : ${clients}" class="list-group-item">
+                            <span th:text="${client.name}">Client Name</span>
+                            <span th:text="${client.email}">Client Email</span>
+                            <div class="list-group-item-actions">
+                                <a th:href="@{/clients/edit/{id}(id=${client.id})}">Редагувати</a>
+                                <a th:href="@{/clients/delete/{id}(id=${client.id})}">Видалити</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Existing Tasks Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Завдання</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li th:each="task : ${tasks}" class="list-group-item">
+                            <span th:text="${task.title}">Task Title</span>
+                            <p th:text="${task.description}">Task Description</p>
+                            <div class="list-group-item-actions">
+                                <a th:href="@{/tasks/edit/{id}(id=${task.id})}">Редагувати</a>
+                                <a th:href="@{/tasks/delete/{id}(id=${task.id})}">Видалити</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Existing Documents Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Документи</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li th:each="document : ${documents}" class="list-group-item">
+                            <span th:text="${document.name}">Document Name</span>
+                            <p th:text="${document.content}">Document Content</p>
+                            <div class="list-group-item-actions">
+                                <a th:href="@{/documents/edit/{id}(id=${document.id})}">Редагувати</a>
+                                <a th:href="@{/documents/delete/{id}(id=${document.id})}">Видалити</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Existing Support Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Підтримка</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li th:each="support : ${supports}" class="list-group-item">
+                            <p th:text="${support.query}">Support Query</p>
+                            <p th:text="${support.response}">Support Response</p>
+                            <div class="list-group-item-actions">
+                                <a th:href="@{/support/edit/{id}(id=${support.id})}">Редагувати</a>
+                                <a th:href="@{/support/delete/{id}(id=${support.id})}">Видалити</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма Документу</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Форма Документу</h1>
+    <nav>
+        <a th:href="@{/documents}">Список Документів</a>
+    </nav>
+    <form th:action="@{/documents}" th:object="${document}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label for="name">Назва:</label>
+            <input type="text" id="name" th:field="*{name}"/>
+        </div>
+        <div>
+            <label for="content">Зміст:</label>
+            <textarea id="content" th:field="*{content}"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="form-button">Зберегти</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

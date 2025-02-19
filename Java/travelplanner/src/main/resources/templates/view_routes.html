@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Routes</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Routes</h1>
+<ul>
+    <li th:each="route : ${routes}">
+        <span th:text="${route.name}">Route Name</span> -
+        <span th:text="${route.description}">Description</span> -
+        <span th:text="${route.startDate}">Start Date</span> -
+        <span th:text="${route.endDate}">End Date</span> -
+        <span th:text="${route.startLocation}">Start Location</span> -
+        <span th:text="${route.endLocation}">End Location</span>
+    </li>
+</ul>
+<a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "javascript-to-typescript",
+  "version": "1.0.0",
+  "description": "This repository is designed to help you learn specialty programming languages like TypeScript (TS) and improve your programming skills. Here you will find code samples, exercises, and projects to help you understand the basics and advanced concepts of these languages.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "typescript": "^5.6.2"
+  }
+}

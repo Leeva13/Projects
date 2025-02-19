@@ -1,0 +1,6 @@
+{% if object.author == user %}
+    <div class="post-actions">
+        <a href="{% url 'post-update' object.id %}" class="btn-edit">Редагувати</a>
+        <a href="{% url 'post-delete' object.id %}" class="btn-delete">Видалити</a>
+    </div>
+{% endif %}

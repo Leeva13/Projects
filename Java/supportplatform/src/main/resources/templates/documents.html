@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Документи</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Документи</h1>
+<nav>
+    <a th:href="@{/}">Головна</a>
+    <a th:href="@{/documents/new}">Додати Документ</a>
+</nav>
+<div class="container">
+    <ul>
+        <li th:each="document : ${documents}">
+            <span th:text="${document.name}"></span>
+            <span th:text="${document.content}"></span>
+            <a th:href="@{/documents/edit/{id}(id=${document.id})}">Редагувати</a>
+            <a th:href="@{/documents/delete/{id}(id=${document.id})}">Видалити</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
