@@ -28,7 +28,7 @@
   - "Назад" – повернення до головного меню.
 
 ## Скріншот
-![Приклад використання](/images/pryklad-vykorystannya.png)
+![Приклад використання](images/pryklad-vykorystannya.png)
 
 ## Структура
 
