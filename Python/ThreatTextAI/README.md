@@ -1,79 +1,79 @@
 # 🎯 ThreatTextAI
 
-**ThreatTextAI** — це потужний проєкт на Python, який використовує модель BERT для класифікації текстових повідомлень за типами загроз: **атак**, **переміщень**, **дезінформації** та **нейтральних текстів**. 🚀
+**ThreatTextAI** is a powerful Python project that uses a BERT model to classify text messages by threat types: **attacks**, **movements**, **disinformation**, and **neutral texts**. 🚀
 
-## 🌟 Опис
-Цей проєкт реалізує машинне навчання для аналізу текстів із набору даних `train.csv` і пропонує зручний інструмент для:
-- 🏋️‍♂️ Тренування моделі на тренувальних даних.
-- 🔮 Роботи з новими текстами та їх класифікації.
-- ✅ Перевірки моделі на тестових даних із файлу `test.csv`.
+## 🌟 Description
+This project implements machine learning for text analysis using the `train.csv` dataset and provides a convenient tool for:
+- 🏋️‍♂️ Training the model on training data.
+- 🔮 Working with new texts and classifying them.
+- ✅ Evaluating the model on test data from the `test.csv` file.
 
-## 🛠️ Вимоги
-- **Python 3.9+ (до 11.9)**
-- Бібліотеки:
-  - `torch` (версія 2.5.0 або сумісна)
+## 🛠️ Requirements
+- **Python 3.9+ (up to 11.9)**
+- Libraries:
+  - `torch` (version 2.5.0 or compatible)
   - `transformers`
   - `pandas`
   - `scikit-learn`
-  - `nlpaug` (для аугментації даних, опціонально)
+  - `nlpaug` (for data augmentation, optional)
 
-## 📦 Встановлення
-1. Клонуй репозиторій:
+## 📦 Installation
+1. Clone the repository:
 
 `git clone https://github.com/Leeva13/ThreatTextAI.git`
 
 `cd ThreatTextAI`
 
-2. Створи та активуй віртуальне середовище:
+2. Create and activate a virtual environment:
 
 `python -m venv .venv`
 
-`.venv\Scripts\activate`  # На Windows
+`.venv\Scripts\activate`  # On Windows
 
-3. Встанови залежності:
+3. Install dependencies:
 
 `pip install -r requirements.txt`
 
-4. Підготуй дані:
-- Файл `data/train.csv` із колонками `text` і `label` (0=attack, 1=movement, 2=disinfo, 3=neutral).
-- Файл `data/test.csv` (опціонально) із тими ж колонками для тестування.
+4. Prepare the data:
+- The file `data/train.csv` with columns `text` and `label` (0=attack, 1=movement, 2=disinfo, 3=neutral).
+- The file `data/test.csv` (optional) with the same columns for testing.
 
-### 📋 Приклад даних
+### 📋 Data Example
 | `text`                                      | `label`  |
 |---------------------------------------------|----------|
-| "Обстріл Харкова з РСЗВ – пошкоджено інфраструктуру" | `attack` (0) |
-| "Колона танків РФ помічена на трасі біля Сватового"  | `movement` (1) |
-| "Україна знищила власну інфраструктуру, щоб звинуватити росію" | `disinfo` (2) |
-| "Сьогодні сонячно, гарна погода для прогулянки"      | `neutral` (3) |
+| "Shelling of Kharkiv with MLRS – infrastructure damaged" | `attack` (0) |
+| "A column of Russian tanks spotted on the highway near Svatove"  | `movement` (1) |
+| "Ukraine destroyed its own infrastructure to blame Russia" | `disinfo` (2) |
+| "It's sunny today, a good day for a walk"      | `neutral` (3) |
 
-## ▶️ Запуск
-1. Активуй віртуальне середовище:
+## ▶️ Running
+1. Activate the virtual environment:
 
 `.venv\Scripts\activate`
 
-2. Запусти програму:
+2. Run the program:
 
 `python src/main.py`
 
-3. Вибери опцію в меню:
-- `1️⃣` Натренувати модель на `train.csv`.
-- `2️⃣` Ввести текст для класифікації.
-- `3️⃣` Перевірити модель на `test.csv`.
-- `4️⃣` Вийти.
+3. Choose an option in the menu:
+- `1️⃣` Train the model on `train.csv`.
+- `2️⃣` Enter text for classification.
+- `3️⃣` Evaluate the model on `test.csv`.
+- `4️⃣` Exit.
 
-## 📂 Структура проєкту
-- `src/main.py`: Головний скрипт із меню.  
-- `src/train.py`: Логіка тренування моделі.  
-- `src/predict.py`: Функція для прогнозування (опціонально).  
-- `src/dataset.py`: Клас для обробки даних.  
-- `data/train.csv`: Тренувальні дані.  
-- `data/test.csv`: Тестові дані (опціонально).  
-- `models/`: Папка для збереження натренованої моделі (`best_model.pth`).
+## 📂 Project Structure
+- `src/main.py`: Main script with menu.  
+- `src/train.py`: Model training logic.  
+- `src/predict.py`: Prediction function (optional).  
+- `src/dataset.py`: Data processing class.  
+- `data/train.csv`: Training data.  
+- `data/test.csv`: Test data (optional).  
+- `models/`: Folder for saving the trained model (`best_model.pth`).
 
-## 💡 Покращення
-- ➕ Додай більше даних у `train.csv` і `test.csv` для кращої узагальнюючої здатності моделі.
-- ⚡ Спробуй налаштувати GPU (NVIDIA CUDA) для прискорення тренування.
+## 💡 Improvements
+- ➕ Add more data to `train.csv` and `test.csv` for better model generalization.
+- ⚡ Try setting up GPU (NVIDIA CUDA) to speed up training.
 
-## 👤 Автор
+## 👤 Author
 - **Leeva13**  
-- Контакт: [artembrk11@gmail.com](mailto:artembrk11@gmail.com) або [GitHub](https://github.com/Leeva13)
+- Contact: [artembrk11@gmail.com](mailto:artembrk11@gmail.com) or [GitHub](https://github.com/Leeva13)
