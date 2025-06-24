@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат аналізу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #f0f8ff;
+        }
+        .result-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 25px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section-title {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>🔍 Результати для файлу: {{ filename }}</h1>
+        <div class="text-result">
+            <h2>📝 Структура пісні:</h2>
+            {% for section in sections %}
+                <div class="section">
+                    <div class="section-title">
+                        {{ section.split('\n')[0] }}
+                    </div>
+                    {{ '\n'.join(section.split('\n')[1:]) }}
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/">⬅️ Завантажити інший файл</a>
+    </div>
+</body>
+</html>

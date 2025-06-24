@@ -1,0 +1,8 @@
+flask==3.0.2
+celery==5.3.6
+redis==5.0.1
+whisper==2024.09.30
+vosk==0.3.50
+librosa==0.10.1
+pydub==0.25.1
+python-dotenv==1.0.1
