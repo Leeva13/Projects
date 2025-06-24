@@ -1,0 +1,30 @@
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: Ordered product ID 3
+INFO:root:User 931705841 performed action: Changed order #1 status to preparing
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: Ordered product ID 4
+INFO:root:User 931705841 performed action: Changed order #1 status to preparing
+INFO:root:User 931705841 performed action: Ordered product ID 3
+INFO:root:User 931705841 performed action: Changed order #2 status to done
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: start
+INFO:root:User 931705841 performed action: Ordered product ID 3
+INFO:root:User 931705841 performed action: Changed order #1 status to preparing
+INFO:root:User 1929829387 performed action: start
+INFO:root:User 1929829387 performed action: Ordered product ID 1
+INFO:root:User 1929829387 performed action: Canceled order #1
+INFO:root:User 1929829387 performed action: Ordered product ID 3
+INFO:root:User 1929829387 performed action: Ordered product ID 4
