@@ -1,0 +1,6 @@
+product_id,title,price,stock,sales_last_30_days,rating,returns_last_30_days
+1001,Wireless Mouse,15.99,25,3,4.5,2
+1002,USB-C Cable,7.49,0,45,4.3,1
+1003,Gaming Keyboard,45.00,10,1,4.7,0
+1004,Monitor Stand,29.99,5,0,4.1,0
+1005,Laptop Stand,39.99,2,0,3.8,0
