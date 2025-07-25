@@ -1,0 +1,19 @@
+ccxt
+pandas
+numpy==1.26.4
+pandas-ta
+scikit-learn
+xgboost
+matplotlib
+streamlit
+python-telegram-bot
+sqlalchemy
+python-dotenv
+seaborn
+imbalanced-learn
+optuna
+wheel
+setuptools
+torch==2.7.1+cu128 torchvision==0.22.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+numba
+websockets
