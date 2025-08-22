@@ -1,10 +1,10 @@
-# app/schemas.py (updated)
+# app/schemas.py
 from pydantic import BaseModel
 from typing import List, Optional
 import datetime
 from .models import LotStatus
 
-# --- Схеми для Ставок (Bid) ---
+# --- Betting Schemes (Bid) ---
 
 class BidBase(BaseModel):
     bidder: str
@@ -21,7 +21,7 @@ class Bid(BidBase):
     class Config:
         from_attributes = True  
 
-# --- Схеми для Лотів (Lot) ---
+# --- Schemes for Lots (Lot) ---
 
 class LotBase(BaseModel):
     name: str
@@ -32,7 +32,7 @@ class LotBase(BaseModel):
 class LotCreate(LotBase):
     pass
 
-# Схема для відповіді API (включає ставки)
+# Schema for API response (includes bets)
 class Lot(LotBase):
     id: int
     current_price: float
@@ -41,4 +41,5 @@ class Lot(LotBase):
     bids: List[Bid] = []
 
     class Config:
+
         from_attributes = True
