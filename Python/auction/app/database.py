@@ -3,24 +3,24 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 
-# Ми будемо використовувати змінні оточення для налаштувань. 
-# Це безпечніше, ніж жорстко кодувати дані в коді.
-# Приклад: postgresql://user:password@host:port/dbname
+# We will use environment variables for the settings. 
+# Example: postgresql://user:password@host:port/dbname
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@db:5432/auction_db")
 
-# Створюємо "двигун" для підключення до БД
+# Create an engine for connecting to the database
 engine = create_engine(DATABASE_URL)
 
-# Створюємо фабрику сесій, яка буде генерувати нові сесії для кожного запиту
+# Create a session factory that will generate new sessions for each request
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Базовий клас для наших моделей ORM. Вони будуть успадковувати його.
+# The base class for our ORM models. They will inherit it.
 Base = declarative_base()
 
-# Функція-залежність (dependency) для отримання сесії БД у ендпоінтах
+# A dependency function for retrieving a database session in endpoints
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
+
         db.close()
