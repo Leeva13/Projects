@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # Сервіс бази даних PostgreSQL
+  db:
+    image: postgres:15-alpine  # Використовуємо офіційний, легкий образ PostgreSQL
+    container_name: auction_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/ # Зберігаємо дані БД між перезапусками
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=auction_db
+    expose:
+      - "5432" # Робимо порт доступним для інших сервісів в мережі Docker
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U user -d auction_db"]
+        interval: 5s
+        timeout: 5s
+        retries: 5
+
+  # Сервіс нашого FastAPI додатку
+  app:
+    build: .  # Збираємо образ з Dockerfile в поточній директорії
+    container_name: auction_app
+    ports:
+      - "8000:8000" # Прокидаємо порт 8000 з контейнера на наш комп'ютер
+    volumes:
+      - ./app:/app  # Синхронізуємо папку app з кодом для live reload
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/auction_db
+    depends_on:
+      db:
+        condition: service_healthy # Запускаємо app тільки після того, як db буде готова
+
+volumes:
+  postgres_data: # Іменований том для зберігання даних БД
