@@ -1,11 +1,11 @@
-# app/models.py (updated)
+# app/models.py
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, Enum as SQLAlchemyEnum
 from sqlalchemy.orm import relationship
 from .database import Base
 import datetime
 import enum
 
-# Створюємо Enum для статусу лота
+# Create an Enum for the lot status
 class LotStatus(str, enum.Enum):
     running = "running"
     ended = "ended"
@@ -21,7 +21,7 @@ class Lot(Base):
     status = Column(SQLAlchemyEnum(LotStatus), default=LotStatus.running)
     end_time = Column(DateTime, nullable=False)
     
-    # Зв'язок "один до багатьох": один лот може мати багато ставок
+    # One-to-many relationship: one lot can have many bids
     bids = relationship("Bid", back_populates="lot")
 
 class Bid(Base):
@@ -32,8 +32,9 @@ class Bid(Base):
     bidder = Column(String, nullable=False)
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
     
-    # Зовнішній ключ, що посилається на таблицю 'lots'
+    # Foreign key referring to the 'lots' table
     lot_id = Column(Integer, ForeignKey("lots.id"))
 
-    # Зворотний зв'язок до лота
+    # Feedback to the lot
+
     lot = relationship("Lot", back_populates="bids")
