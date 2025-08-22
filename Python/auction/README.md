@@ -9,7 +9,8 @@ This is a FastAPI-based auction service with WebSocket support for real-time bid
 - Subscribe to lot updates via WebSocket for real-time notifications on new bids and time extensions (if a bid is placed in the last minute, the auction extends by 1 minute).
 
 ## Project Structure
-auction_service/
+```
+auction/
 │
 ├── app/                  # The main folder with the code of our application
 │   ├── __init__.py       # Makes 'app' a Python package
@@ -24,6 +25,7 @@ auction_service/
 ├── docker-compose.yml    # File to run the application and database together
 ├── requirements.txt      # List of project dependencies
 └── README.md             # Project description and launch instructions
+```
 
 ## How to Run
 1. Clone the repository:
@@ -41,4 +43,5 @@ docker-compose up --build
 - The database tables are automatically created on startup.
 - Auctions end automatically based on `end_time`, with lazy status updates on access.
 - Time extension: If a bid is placed within the last minute, the end time is extended by 1 minute, and a notification is sent via WebSocket.
+
 - No authentication is implemented; bidders are identified by a string name.
