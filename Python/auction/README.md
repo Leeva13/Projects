@@ -29,11 +29,11 @@ auction/
 
 ## How to Run
 1. Clone the repository:
-git clone <your-repo-url>
-cd auction</your-repo-url>
+`git clone https://github.com/Leeva13/Projects.git` | 
+`cd Projects/Python/auction`
 
 2. Build and start the containers:
-docker-compose up --build
+`docker-compose up --build`
 
 3. The API will be available at `http://localhost:8000`. You can access the docs at `http://localhost:8000/docs`.
 
@@ -45,3 +45,4 @@ docker-compose up --build
 - Time extension: If a bid is placed within the last minute, the end time is extended by 1 minute, and a notification is sent via WebSocket.
 
 - No authentication is implemented; bidders are identified by a string name.
+
